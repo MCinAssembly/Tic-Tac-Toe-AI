@@ -162,7 +162,7 @@ def user_move():
     print_board()
     end_game = check_win()
     if (end_game == "Computer Win"):
-        print("You loose")
+        print("You lose")
         main()
     elif (end_game == "Player Win"):
         print("You win!")
@@ -431,7 +431,7 @@ def computer_move():
                 end_game = check_win()
                 print_board()
                 if (end_game == "Computer Win"):
-                    print("You loose")
+                    print("You lose")
                     main()
                 elif (end_game == "Player Win"):
                     print("You win!")
