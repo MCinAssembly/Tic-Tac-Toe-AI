@@ -166,6 +166,7 @@ def user_move():
         main()
     elif (end_game == "Player Win"):
         print("You win!")
+        main()
     elif (end_game == "Draw!"):
         print("Draw!")
                 # or board array full:
@@ -408,7 +409,38 @@ def computer_move():
                 row = 1
                 column = 2
             ############################################################################################
-            
+
+            elif board_array[0][0] == "X" and board_array[2][2] == " ":
+                row = 2
+                column = 2
+            elif board_array[0][2] == "X" and board_array[2][0] == " ":
+                row = 1
+                column = 1
+            elif board_array[2][0] == "X" and board_array[0][2] == " ":
+                row = 1
+                column = 1
+            elif board_array[2][2] == "X" and board_array[0][0] == " ":
+                row = 1
+                column = 1
+
+            ###############################################################################################
+
+            elif board_array[0][0] == "X" and board_array[1][1] == " ":
+                row = 1
+                column = 1
+            elif board_array[0][2] == "X" and board_array[1][1] == " ":
+                row = 1
+                column = 1
+            elif board_array[2][0] == "X" and board_array[1][1] == " ":
+                row = 1
+                column = 1
+            elif board_array[2][2] == "X" and board_array[1][1] == " ":
+                row = 1
+                column = 1
+
+            ############################################################################################
+
+
             elif board_array[0][0] == " ":
                 row = 0
                 column = 0
@@ -421,6 +453,8 @@ def computer_move():
             elif board_array[2][2] == " ":
                 row = 2
                 column = 2
+            ##############################################################################################
+            
             
                 
             else:
@@ -435,6 +469,7 @@ def computer_move():
                     main()
                 elif (end_game == "Player Win"):
                     print("You win!")
+                    main()
                 elif (end_game == "Draw!"):
                     print("Draw!")
                 # or board array full:
@@ -447,7 +482,12 @@ def computer_move():
 
 
 def play_game():
-    computer_move()
+    choose_first = [1, 2]
+    chosen = random.choice(choose_first)
+    if chosen == 1:       
+        computer_move()
+    else:
+        user_move()
 
     #print(end_game)
 
