@@ -3,7 +3,7 @@ import random
 end_game = " "
 
 board_array = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]
-board_preview = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
+board_preview = [["7", "8", "9"], ["4", "5", "6"], ["1", "2", "3"]]
 
 def print_board():
     global board_array
@@ -75,8 +75,8 @@ def user_move():
 
             if user_input == "1":
 
-                if board_array[0][0] == " ":
-                    board_array[0][0] = "X"
+                if board_array[2][0] == " ":
+                    board_array[2][0] = "X"
                     break;
 
                 else:
@@ -84,8 +84,8 @@ def user_move():
 
             elif user_input == "2":
 
-                if board_array[0][1] == " ":
-                    board_array[0][1] = "X"
+                if board_array[2][1] == " ":
+                    board_array[2][1] = "X"
                     break;
 
                 else:
@@ -93,8 +93,8 @@ def user_move():
 
             elif user_input == "3":
 
-                if board_array[0][2] == " ":
-                    board_array[0][2] = "X"
+                if board_array[2][2] == " ":
+                    board_array[2][2] = "X"
                     break;
 
                 else:
@@ -129,8 +129,8 @@ def user_move():
 
             elif user_input == "7":
 
-                if board_array[2][0] == " ":
-                    board_array[2][0] = "X"
+                if board_array[0][0] == " ":
+                    board_array[0][0] = "X"
                     break;
 
                 else:
@@ -138,8 +138,8 @@ def user_move():
 
             elif user_input == "8":
 
-                if board_array[2][1] == " ":
-                    board_array[2][1] = "X"
+                if board_array[0][1] == " ":
+                    board_array[0][1] = "X"
                     break;
 
                 else:
@@ -147,8 +147,8 @@ def user_move():
 
             elif user_input == "9":
 
-                if board_array[2][2] == " ":
-                    board_array[2][2] = "X"
+                if board_array[0][2] == " ":
+                    board_array[0][2] = "X"
                     break;
 
                 else:
@@ -410,39 +410,6 @@ def computer_move():
                 column = 2
             ############################################################################################
 
-            elif board_array[0][0] == "O" and board_array[1][1] == "X" and board_array[2][2] == " ":
-                row = 2
-                column = 2
-            elif board_array[2][2] == "O" and board_array[1][1] == "X" and board_array[0][0] == " ":
-                row = 0
-                column = 0
-            elif board_array[0][2] == "O" and board_array[1][1] == "X" and board_array[2][0] == " ":
-                row = 2
-                column = 0
-            elif board_array[2][0] == "O" and board_array[1][1] == "X" and board_array[0][2] == " ":
-                row = 0
-                column = 2
-
-
-
-            ############################################################################################
-            elif board_array[0][0] == "O" and board_array[2][2] == "O" and board_array[1][1] == "X":
-                if board_array[0][1] == " " and board_array[1][2] == " " and board_array[0][2] == " ":
-                    row = 0
-                    column = 2
-                elif board_array[1][0] == " " and board_array[2][1] == " " and board_array[2][0] == " ":
-                    row = 2
-                    column = 0
-            elif board_array[0][2] == "O" and board_array[2][0] == "O" and board_array[1][1] == "X":
-                if board_array[0][1] == " " and board_array[1][0] == " " and board_array[0][0] == " ":
-                    row = 0
-                    column = 0
-                elif board_array[1][2] == " " and board_array[2][1] == " " and board_array[2][2] == " ":
-                    row = 2
-                    column = 2
-                
-            
-            ##############################################################################################
             elif board_array[0][0] == "X" and board_array[1][1] == " ":
                 row = 1
                 column = 1
