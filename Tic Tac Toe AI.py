@@ -410,6 +410,39 @@ def computer_move():
                 column = 2
             ############################################################################################
 
+            elif board_array[0][0] == "O" and board_array[1][1] == "X" and board_array[2][2] == " ":
+                row = 2
+                column = 2
+            elif board_array[2][2] == "O" and board_array[1][1] == "X" and board_array[0][0] == " ":
+                row = 0
+                column = 0
+            elif board_array[0][2] == "O" and board_array[1][1] == "X" and board_array[2][0] == " ":
+                row = 2
+                column = 0
+            elif board_array[2][0] == "O" and board_array[1][1] == "X" and board_array[0][2] == " ":
+                row = 0
+                column = 2
+
+
+
+            ############################################################################################
+            elif board_array[0][0] == "O" and board_array[2][2] == "O" and board_array[1][1] == "X":
+                if board_array[0][1] == " " and board_array[1][2] == " " and board_array[0][2] == " ":
+                    row = 0
+                    column = 2
+                elif board_array[1][0] == " " and board_array[2][1] == " " and board_array[2][0] == " ":
+                    row = 2
+                    column = 0
+            elif board_array[0][2] == "O" and board_array[2][0] == "O" and board_array[1][1] == "X":
+                if board_array[0][1] == " " and board_array[1][0] == " " and board_array[0][0] == " ":
+                    row = 0
+                    column = 0
+                elif board_array[1][2] == " " and board_array[2][1] == " " and board_array[2][2] == " ":
+                    row = 2
+                    column = 2
+                
+            
+            ##############################################################################################
             elif board_array[0][0] == "X" and board_array[1][1] == " ":
                 row = 1
                 column = 1
